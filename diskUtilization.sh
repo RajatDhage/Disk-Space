@@ -28,7 +28,7 @@ display_disk_usage(){
         # Send email notification
         subject="Disk Utilization Alert"
         body="Warning: Disk utilization is more than 80%. Please take necessary action."
-        recipient="admin@example.com"
+        recipient="rajatdhage04@gmail.com"
         
         echo "$body" | mail -s "$subject" "$recipient"
     else
