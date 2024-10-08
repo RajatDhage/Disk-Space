@@ -6,7 +6,8 @@ display_disk_usage(){
     echo
 
     # Use df to get disk usage
-    disk_usage=$(df -h | awk 'NR==1 || /^\/dev\// {print $0}')
+    disk_usage=$(df -h | awk 'NR==1 || /^\/dev\// {print $0}') 
+    # The awk command prints the first line (the header) and any line that starts with /dev/, which represents the actual disk partitions.
 
     # Display the disk usage
     echo "$disk_usage"
